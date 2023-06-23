@@ -1,31 +1,15 @@
-import { FormEvent, useState } from 'react'
+import { HeroSecao } from './styles'
+import { HeroSecaoDiv } from './styles'
+import { HeroTitulo } from './styles'
 
-import styles from './FormVagas.module.css'
+const Hero = () => (
+  <HeroSecao>
+    <HeroSecaoDiv>
+      <HeroTitulo>
+        As melhores vagas para tecnologia, design e artes visuais.
+      </HeroTitulo>
+    </HeroSecaoDiv>
+  </HeroSecao>
+)
 
-type Props = {
-  aoPesquisar: (termo: string) => void
-}
-
-const FormVagas = ({ aoPesquisar }: Props) => {
-  const [termo, setTermo] = useState<string>('')
-
-  const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    aoPesquisar(termo.toLocaleLowerCase())
-  }
-
-  return (
-    <form className={styles.form} onSubmit={aoEnviarForm}>
-      <input
-        className={styles.campo}
-        placeholder="Front-end, fullstack, node, design"
-        onChange={(e) => setTermo(e.target.value)}
-        type="search"
-      />
-      <button className={styles.btnPesquisar} type="submit">
-        Pesquisar
-      </button>
-    </form>
-  )
-}
-export default FormVagas
+export default Hero
