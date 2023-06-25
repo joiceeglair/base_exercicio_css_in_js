@@ -28,17 +28,4 @@ const Vaga = (props: Props) => (
   </VagaModulo>
 )
 
-export default Vagali>
-      <li>Tipo de contratacao: {props.modalidade}</li>
-      <li>
-        Salário: {props.salarioMin} - {props.salarioMax}
-      </li>
-      <li>Requisitos: {props.requisitos.join(', ')}</li>
-    </ul>
-    <a className={styles.vagaLink} href="#">
-      Ver detalhes e candidatar-se
-    </a>
-  </li>
-)
-
 export default Vaga
